@@ -8,7 +8,7 @@
 - In major (Type 1) emergency departments the figure was **57.7%**, against **60.1%** for England.
 - In **March 2026**, the deadline for the 78% target, the North West reached **75.0%** (England **77.1%**).
 - **10,980** patients waited 12+ hours from a decision to admit, up **236** on October 2025.
-- Over the latest three months, **1 of 18** North West trusts with a major A&E met 82%. Highest: Alder Hey Children'S (**87.5%**); lowest: East Cheshire (**50.6%**).
+- Over the latest three months, **1 of 18** North West trusts with a major A&E met 82%. Highest: Alder Hey Children's (**87.5%**); lowest: East Cheshire (**50.6%**).
 
 ## Data quality
 
