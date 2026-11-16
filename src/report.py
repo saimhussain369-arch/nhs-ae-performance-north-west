@@ -25,9 +25,10 @@ def _style(ax, grid_axis="y"):
 
 
 def _short(name: str) -> str:
-    s = name.title()
+    s = " ".join(w.capitalize() for w in name.lower().split())  # str.title() would give "Children'S"
     for a, b in [(" Nhs Foundation Trust", ""), (" Nhs Trust", ""), (" University Hospitals", " Univ. Hospitals"),
-                 ("University Hospitals Of ", "UH "), (" Teaching Hospitals", " Teaching"), (" And ", " & ")]:
+                 ("University Hospitals Of ", "UH "), (" Teaching Hospitals", " Teaching"), (" And ", " & "),
+                 (" Of ", " of ")]:
         s = s.replace(a, b)
     return s
 

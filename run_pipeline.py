@@ -16,13 +16,14 @@ def main() -> None:
     con = pipeline.run()
     print(con.sql("SELECT check_name, status, failures FROM dq_summary"))
     failed = con.sql("SELECT count(*) FROM dq_summary WHERE status = 'Fail'").fetchone()[0]
+    if failed:
+        print(con.sql("SELECT * FROM dq_failures LIMIT 20"))
+        sys.exit(f"{failed} data quality check(s) failed - no outputs written")
     print("3/3 writing extracts, charts and summary")
     report.extracts(con)
     report.charts(con)
     report.summary(con)
     print(con.sql("SELECT * FROM area_month WHERE month = (SELECT max(month) FROM area_month)"))
-    if failed:
-        sys.exit(f"{failed} data quality check(s) failed - see outputs/dq_summary.csv")
 
 
 if __name__ == "__main__":
