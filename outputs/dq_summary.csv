@@ -1,0 +1,7 @@
+check_name,description,failures,status
+counts_are_valid,"All counts are present, numeric and not negative",0,Pass
+one_row_per_provider_month,Each provider appears once per month,0,Pass
+over_4h_not_above_attendances,Patients over 4 hours never exceed attendances,0,Pass
+period_matches_file,Period in each file matches the month it was downloaded for,0,Pass
+providers_reconcile_to_published_total,Sum of providers equals NHS England's published national total,0,Pass
+published_total_present,Every file contains the national TOTAL row,0,Pass
